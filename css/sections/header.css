@@ -1,0 +1,64 @@
+.header__nav{
+    display: flex;
+    overflow: hidden;/* if you want any two elements onto each other */
+}
+
+.header__logo{
+    flex: 1; /* this is used when we want all the elements in the flexbox to have equal space */
+    display: flex; /* this is used for making the elements horizontal  */
+
+    position: relative;   /*this is used when you want to move the element wherever it wants without changing other elements layout*/
+    padding: 20px;
+}
+
+.header__logo-overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.header__logo h4{
+    padding-left: 30px;
+    color: #fff;
+    opacity: 0.8;
+    font-family: var(--playfair-display);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header__menu,.header__menu-mobile{
+    padding: 20px;
+    flex: 1.236;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 64px;
+    list-style: none;
+}
+
+.header__menu li{
+    font-weight: 500;
+    font-family: var(--plus-jakarata-sans);
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 20px;
+    cursor: pointer;   
+}
+
+.header__menu li img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.header__menu-mobile{
+    display: none;
+    gap: 20px;
+
+    position: relative;
+}
